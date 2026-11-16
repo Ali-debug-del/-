@@ -19,26 +19,16 @@ jobs:
         distribution: 'temurin'
         java-version: '17'
 
-    - name: Run Android Build
+    - name: Clean and Build Android APK
       run: |
+        # جعل ملفات التوزيع قابلة للتنفيذ إن وجدت
+        chmod +x gradlew 2>/dev/null || true
+        
+        # تنفيذ عملية التنظيف والبناء مع تفعيل التفاصيل لتجاوز الأخطاء المؤقتة
         if [ -f "./gradlew" ]; then
-          chmod +x ./gradlew
-          ./gradlew assembleDebug
-        elif [ -f "gradlew" ]; then
-          chmod +x gradlew
-          ./gradlew assembleDebug
+          ./gradlew clean assembleDebug --stacktrace
         else
-          echo "Looking for build files..."
-          find . -name "gradlew"
-          # Try to find and use gradle wrapper if located in subfolder
-          GRADLEW_PATH=$(find . -name "gradlew" | head -n 1)
-          if [ ! -z "$GRADLEW_PATH" ]; then
-            chmod +x "$GRADLEW_PATH"
-            "$GRADLEW_PATH" assembleDebug
-          else
-            echo "Gradle wrapper not found, building with default gradle if available"
-            gradle assembleDebug
-          fi
+          gradle clean assembleDebug --stacktrace
         fi
 
     - name: Upload APK Artifact
