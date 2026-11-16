@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">درع التطبيقات</string>
+    <string name="nav_dashboard">لوحة التحكم</string>
+    <string name="nav_apps">التطبيقات</string>
+    <string name="nav_charts">التحليلات</string>
+    <string name="nav_schedules">الجدولة</string>
+    <string name="nav_logs">السجل والنظام</string>
+
+    <string name="shield_active">الحماية نشطة</string>
+    <string name="shield_inactive">الحماية متوقفة</string>
+    <string name="shield_activate">تفعيل الدرع</string>
+    <string name="shield_deactivate">إيقاف الدرع</string>
+
+    <string name="block_mode_none">مسموح</string>
+    <string name="block_mode_memory">حجب الذاكرة فقط</string>
+    <string name="block_mode_internet">حجب الإنترنت فقط</string>
+    <string name="block_mode_both">حجب الذاكرة والإنترنت</string>
+
+    <string name="timing_immediate">تطبيق فوري</string>
+    <string name="timing_scheduled">جدولة زمنية</string>
+
+    <string name="vpn_channel_name">حالة جدار الحماية</string>
+    <string name="schedule_channel_name">تنبيهات الجدولة</string>
+    <string name="hero_banner_desc">درع حماية التطبيقات للذاكرة والإنترنت</string>
+    <string name="app_icon_desc">أيقونة التطبيق</string>
+</resources>

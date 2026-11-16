@@ -1,0 +1,6 @@
+{
+  "name": "درع التطبيقات",
+  "description": "تطبيق احترافي لحجب التطبيقات من استخدام الذاكرة والإنترنت مع خيار التطبيق الفوري أو الجدولة الزمنية.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
